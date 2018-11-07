@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import AuthView from './views/Auth';
+import AuthLogin from './pages/Auth/Login';
 
 Vue.use(Router);
 
@@ -10,16 +11,20 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
+      redirect: '/auth/login',
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      path: '/auth/',
+      name: 'auth',
+      component: AuthView,
+      redirect: '/auth/login',
+      children: [
+        {
+          path: 'login',
+          name: 'auth.login',
+          component: AuthLogin,
+        },
+      ],
     },
   ],
 });
