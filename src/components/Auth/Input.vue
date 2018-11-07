@@ -4,7 +4,7 @@
       {{ label }}
 
       <input
-        class="border rounded p-3 w-full mt-1 border-grey-light text-grey-darkest"
+        class="border rounded p-3 w-full mt-2 border-grey-light text-grey-darkest"
         :class="{ 'border-red-light': errors.length }"
         :type="type"
         @input="$ev => $emit('input', $ev.target.value)"
