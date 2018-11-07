@@ -5,7 +5,25 @@
         <h1 class="text-center text-green-light">Book <span class="text-green -ml-3 text-2xl">Movie</span></h1>
       </router-link>
 
-      <router-view />
+      <div class="relative">
+          <router-view />
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+  import Slide from '@/components/Slide';
+
+  export default {
+    components: {
+      Slide,
+    },
+
+    computed: {
+      reverse () {
+        return false;
+      },
+    },
+  };
+</script>

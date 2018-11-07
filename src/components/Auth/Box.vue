@@ -1,5 +1,5 @@
 <template>
-  <div class="text-xs sm:text-sm font-light text-grey-darker">
+  <div class="text-xs sm:text-sm font-light text-grey-darker w-full">
     <div class="bg-white p-4 sm:p-6 rounded shadow mb-4">
       <slot />
     </div>
