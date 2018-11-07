@@ -1,15 +1,14 @@
 <template>
   <auth-box
-    to="/auth/register"
-    action="Don't have an account?">
+    to="/auth/login"
+    action="Already registered?">
 
     <auth-form
-      action="Login"
+      action="Register"
       @submit.prevent>
 
       <auth-input
         type="text"
-        v-model="email"
         label="Your e-mail"
         placeholder="iamtheone@whoknocks.com" />
 
@@ -17,6 +16,11 @@
         type="password"
         label="Your password"
         placeholder="Your mom birthday? 123123" />
+
+      <auth-input
+        type="password"
+        label="Confirm your password"
+        placeholder="Just repeat your mom birthday" />
     </auth-form>
   </auth-box>
 </template>
@@ -32,10 +36,5 @@
       AuthForm,
       AuthInput,
     },
-
-    data: () => ({
-      email: '',
-      password: '',
-    }),
   };
 </script>
