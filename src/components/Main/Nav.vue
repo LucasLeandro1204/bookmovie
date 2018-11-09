@@ -4,7 +4,7 @@
 
     <ul class="list-reset flex font-thin text-sm">
       <li v-for="(text, path) in links" :key="path">
-        <router-link exact class="text-grey-darker hover:text-green p-3 hover:border-green border-b -mb-px sm:-mb-1 block" active-class="border-green text-green" :to="path" v-text="text" />
+        <router-link exact class="text-grey-darker hover:text-indigo p-3 hover:border-indigo border-b -mb-px sm:-mb-1 block" active-class="border-indigo text-indigo" :to="path" v-text="text" />
       </li>
     </ul>
   </nav>

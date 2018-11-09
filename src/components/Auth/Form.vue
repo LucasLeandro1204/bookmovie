@@ -7,7 +7,7 @@
 
       <button
         type="submit"
-        class="ml-auto px-4 py-3 bg-green-light text-white font-thin rounded"
+        class="ml-auto px-4 py-3 bg-indigo-light text-white font-thin rounded hover:bg-indigo"
         v-text="action"></button>
     </div>
   </form>
