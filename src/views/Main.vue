@@ -2,7 +2,7 @@
   <div>
     <main-nav :links="links" />
 
-    <div class="max-w-xl w-full mx-auto py-8 sm:py-16 px-3">
+    <div class="max-w-xl w-full mx-auto py-8 px-3">
       <router-view />
     </div>
   </div>
